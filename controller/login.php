@@ -19,6 +19,7 @@
 
         if( isset($_POST['username']) ){
             $username = $_POST['username'];
+            $_SESSION['username'] = $username;
         }else{
             addMessagePart("username not set!");
         }

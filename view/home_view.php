@@ -41,14 +41,14 @@
         ?>
 
         <!-- Login Form Card -->
-
+    
         <div id="login" class="card col-12 col-md-3 m-auto text-center mt-5">
             <a href="https://shop.olympics.com/en/milano-cortina-2026/milano-cortina-2026-olympic-winter-games-poster-by-olimpia-zagnoli-50x70cm/t-80254572+p-80443683924993+z-8-4074408053" target="_blank"><img src="..\public\assets\login-card.png" class="card-img-top" alt="Milano Cortina 2026 Olympic Winter Games Poster by Olimpia Zagnoli"></a>
             <div class="card-body">
                 <h2 class="card-title login-title">Login</h2>
                 <br>
                 <form action="index.php" method="POST">
-                    <input type="text"     name="username" placeholder="username" required>
+                    <input type="text"     name="username" placeholder="username" required value="<?= $username ?>">
                     <br><br>
                     <input type="password" name="password" placeholder="password" required>
                     <br><br>

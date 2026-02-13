@@ -32,6 +32,8 @@
 
         require_once __DIR__ . '/../view/volunteer_view.php';
     }else{
+        
+        $username = (isset($_SESSION['username']) ? $_SESSION['username'] : '');
         require_once __DIR__ . '/../view/home_view.php';
     }
 
