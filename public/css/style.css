@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #FFFFFF;
+    --text-color: #EAE0C8;
+    --accent-color: x;
+    --background-color: x;
+}
+
+.title, .subtitle {
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+}
+
+.title {
+    color: var(--text-color) !important;
+
+}
+
+
+
+.login-title, .registration-title {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}

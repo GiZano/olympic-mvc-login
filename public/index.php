@@ -16,6 +16,6 @@
     session_start();
 
     // require the core controller of the project
-    require_once __DIR__ . '/controller/home.php';
+    require_once __DIR__ . '/../controller/home.php';
 
 ?>
