@@ -1,37 +1,58 @@
+<div align="center">
+
 # 🏂 Milano-Cortina 2026 - Volunteer Portal
 
+### MVC PHP Web Application
+
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-MVC-orange?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Ready-brightgreen?style=for-the-badge)
 
-## Project Description
-Welcome to the repository of the **Milano-Cortina Volunteer Portal**. This project is a fullstack web application developed in pure PHP to manage the login and registration process for volunteers of the upcoming 2026 Winter Olympic Games.
+</div>
 
-The portal has been strictly designed following the **MVC (Model-View-Controller)** architecture to ensure clean, maintainable, and scalable code. Instead of a standard relational database, the application leverages advanced PHP Session management to simulate data persistence, making it perfect for rapid testing, prototyping, or demonstrations.
+---
 
-## 🎥 Demo
+## 📖 Project Description
+Welcome to the repository of the **Milano-Cortina Volunteer Portal**. This project is a fullstack web application developed in pure PHP to manage the login and registration process for volunteers of the 2026 Winter Olympic Games.
+
+The portal has been strictly designed following the **MVC (Model-View-Controller)** architecture to ensure clean, maintainable, and scalable code. Instead of a standard relational database, the application leverages advanced PHP Session management to simulate data persistence, making it an excellent showcase for rapid prototyping, session handling, and state management without external dependencies.
+
+---
+
+## 🎥 Live Demo
 Here is a quick demonstration of the portal in action, from login to registering a new volunteer:
 
-![Login and Registration Portal Demo](./public/assets/demo_login.gif)
+<div align="center">
+  <img src="./public/assets/demo_login.gif" alt="Login and Registration Portal Demo" width="100%" />
+</div>
 
-## 🛠 Tech Stack
-* **Core Language:** PHP 
-* **Frontend:** HTML5, CSS3, Bootstrap 5.3 (via CDN)
-* **Architecture:** MVC Pattern
+---
 
-## 📁 Project Structure
+## ✨ Key Features
 
-The codebase is divided into logical directories following the MVC pattern. Here is the complete tree structure:
+* **🔐 Authentication:** Secure login system with credential validation.
+* **📝 Dynamic Registration:** Ability to create new volunteer accounts on the fly.
+* **💾 State Management (Mock DB):** Utilizes `$_SESSION` to simulate a persistent database, keeping accounts active for the duration of the browser session.
+* **💬 User Feedback System:** Integrated message handling to provide immediate visual cues (e.g., red alerts for errors, green for success).
+* **📱 Responsive UI:** Mobile and desktop-friendly interface built with HTML5, CSS3, and Bootstrap 5.3.
+
+---
+
+## 📂 Project Structure & MVC Architecture
+
+The codebase enforces a strict **Separation of Concerns**, divided into logical directories following the MVC pattern.
 
 ```text
 .
-├── controller/
+├── controller/          # Application logic and routing
 │   ├── home.php
 │   ├── login.php
 │   ├── logout.php
 │   └── register.php
-├── model/
+├── model/               # Data layer and state management
 │   └── data.php
-├── public/
+├── public/              # Web-exposed directory (Entry point)
 │   ├── assets/
 │   │   ├── demo_login.gif
 │   │   ├── login-card.png
@@ -40,38 +61,46 @@ The codebase is divided into logical directories following the MVC pattern. Here
 │   ├── css/
 │   │   └── style.css
 │   └── index.php
-└── view/
+└── view/                # User Interface (Presentation layer)
     ├── home_view.php
     └── volunteer_view.php
 ```
 
 ### Directory Breakdown:
-* ```public/``` : The web-exposed directory. It contains the application entry point (```index.php```) and public assets (CSS, images, and the demo GIF).
-* ```controller/``` : The routing "brain". It handles HTTP requests, processes forms, and decides which View to render (```home.php```, ```login.php```, ```register.php```, ```logout.php```).
-* ```model/``` : The data layer. It contains ```data.php``` which handles authentication logic, registration, and the manipulation of the session-based mock database.
-* ```view/``` : The User Interface. The ```home_view.php``` and ```volunteer_view.php``` files present data to the end user.
+* **`public/`** : The only directory exposed to the web server. It contains the application entry point (`index.php`) and static assets (CSS, images).
+* **`controller/`** : The "brain" of the application. It handles incoming HTTP requests, processes form submissions, interacts with the Model, and dictates which View to render.
+* **`model/`** : The data layer. `data.php` encapsulates the authentication logic, registration processes, and manipulation of the session-based mock database.
+* **`view/`** : The UI layer. These files (`home_view.php`, `volunteer_view.php`) are strictly for presenting data to the end-user, containing no complex business logic.
+
+---
 
 ## 🚀 How to Run Locally
 
-To run this project on your local machine, you don't need to configure Apache, Nginx, or a MySQL server. You just need PHP installed!
+To test this project on your local machine, you do **not** need to configure Apache, Nginx, or a MySQL server. A local PHP installation is all that is required.
 
-1. Clone this repository to your local machine.
-2. Open your favorite terminal and navigate to the project's root folder.
-3. Start the PHP built-in development server, pointing it to the ```public``` directory:
+### 1. Clone the repository
+Navigate to your preferred directory and clone the project:
+
+```bash
+git clone https://github.com/GiZano/Milano-Cortina-2026.git
+cd Milano-Cortina-2026
+```
+
+### 2. Start the PHP Built-in Server
+Open your terminal in the project's root folder and start the server, explicitly pointing the document root to the `public` directory:
    
-   ```bash
-   php -S localhost:8000 -t public
-   ```
+```bash
+php -S localhost:8000 -t public
+```
 
-4. Open your web browser and go to: ```http://localhost:8000```
+### 3. Access the Application
+Open your web browser and navigate to: 
+[http://localhost:8000](http://localhost:8000)
 
-## ✨ Features
+---
 
-* **Authentication:** Login system with credential validation.
-* **Volunteer Registration:** Ability to create new user accounts on the fly.
-* **Data Persistence (Mock):** Uses ```$_SESSION``` to keep created accounts active until the browser session is destroyed.
-* **Message Handling (Feedback):** Integrated system to provide users with immediate visual feedback (red for errors, green for success).
-* **Responsive UI:** Mobile and desktop-friendly interface powered by Bootstrap.
+<div align="center">
 
-## 👨‍💻 Author
-**GiZano** (Giovanni Zanotti) - © 2026 All rights reserved.
+**Developed by [GiZano](https://giovanni-zanotti.is-a.dev)**
+
+</div>
